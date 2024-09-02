@@ -1,0 +1,13 @@
+name: New issue created
+on:
+   issues:
+   
+jobs:
+  hello:
+    runs-on: ubuntu-self-hosted
+    steps:
+      - name: Replicate new issue from Github to Opensupport
+        run : |
+            echo "New issue: ${{ github.event.issue.title }}"
+            echo "Content: ${{ github.event.issue.body }}"
+            echo "TODO: integrate this with opensupport"
